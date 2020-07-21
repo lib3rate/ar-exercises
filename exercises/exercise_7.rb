@@ -9,4 +9,7 @@ require_relative './exercise_6'
 puts "Exercise 7"
 puts "----------"
 
-# Your code goes here ...
+puts "Please enter the name of the new store:"
+new_store_name = $stdin.gets.chomp
+new_store = Store.create(name: new_store_name)
+puts new_store.errors.messages
